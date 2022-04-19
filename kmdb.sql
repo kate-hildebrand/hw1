@@ -103,8 +103,8 @@
 -- TODO!
 DROP TABLE IF EXISTS movies;
 DROP TABLE IF EXISTS studios;
-DROP TABLE IF EXISTS characters;
 DROP TABLE IF EXISTS actors;
+DROP TABLE IF EXISTS characters;
 
 -- Create new tables, according to your domain model
 -- TODO!
@@ -514,6 +514,9 @@ VALUES (
 -- The SQL statement for the movies output
 -- TODO!
 
+SELECT movies.movie_name, movies.year_released, movies.mpaa_rating,studios.studio_name
+    FROM movies INNER JOIN studios ON movies.id = studios.movie_id;
+
 -- Prints a header for the cast output
 .print ""
 .print "Top Cast"
@@ -523,3 +526,8 @@ VALUES (
 
 -- The SQL statement for the cast output
 -- TODO!
+
+SELECT movies.movie_name, actors.full_name, characters.character_name
+    FROM characters 
+    INNER JOIN actors ON actors.id = characters.actor_id  
+    INNER JOIN movies ON movies.id = characters.movie_id;
