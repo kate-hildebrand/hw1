@@ -118,6 +118,7 @@ CREATE TABLE movies (
 
 CREATE TABLE studios (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
+    studio_name TEXT,
     movie_id INTEGER
 );
 
@@ -138,15 +139,372 @@ CREATE TABLE characters (
 -- TODO!
 
 INSERT INTO movies (
+    id,
     movie_name,
     year_released,
     mpaa_rating
 )
 VALUES (
+        "1",
         "Batman Begins",                     
         "2005",
         "PG-13"
 );
+
+INSERT INTO movies (
+    id,
+    movie_name,
+    year_released,
+    mpaa_rating
+)
+VALUES (
+        "2",
+        "The Dark Knight",                     
+        "2008",
+        "PG-13"
+);
+
+INSERT INTO movies (
+    id,
+    movie_name,
+    year_released,
+    mpaa_rating
+)
+VALUES (
+        "3",
+        "The Dark Knight Rises",                     
+        "2012",
+        "PG-13"
+);     
+
+INSERT INTO studios (
+    id,
+    studio_name,
+    movie_id
+)
+VALUES (
+        "1",
+        "Warner Bros.",                     
+        "1"
+);     
+
+INSERT INTO studios (
+    id,
+    studio_name,
+    movie_id
+)
+VALUES (
+        "2",
+        "Warner Bros.",                     
+        "2"
+); 
+
+INSERT INTO studios (
+    id,
+    studio_name,
+    movie_id
+)
+VALUES (
+        "3",
+        "Warner Bros.",                     
+        "3"
+); 
+
+INSERT INTO actors ( 
+    id,
+    full_name)
+
+ VALUES (
+    "1",
+    "Christian Bale"
+    );
+
+INSERT INTO actors ( 
+    id,
+    full_name)
+
+VALUES (
+    "2",
+    "Michael Caine"
+    );
+
+INSERT INTO actors ( 
+    id,
+    full_name)
+
+VALUES (
+    "3",
+    "Liam Neeson"
+    );
+
+INSERT INTO actors ( 
+    id,
+    full_name)
+
+VALUES (
+    "4",
+    "Katie Holmes"
+    );
+
+INSERT INTO actors ( 
+    id,
+    full_name)
+
+VALUES (
+    "5",
+    "Gary Oldman"
+    );
+
+INSERT INTO actors ( 
+    id,
+    full_name)
+
+VALUES (
+    "6",
+    "Heath Ledger"
+    );
+
+INSERT INTO actors ( 
+    id,
+    full_name)
+
+VALUES (
+    "7",
+    "Aaron Eckhart"
+    );
+
+INSERT INTO actors ( 
+    id,
+    full_name)
+
+VALUES (
+    "8",
+    "Maggie Gyllenhaal"
+    );
+
+INSERT INTO actors ( 
+    id,
+    full_name)
+
+VALUES (
+    "9",
+    "Tom Hardy"
+    );
+
+INSERT INTO actors ( 
+    id,
+    full_name)
+
+VALUES (
+    "10",
+    "Joseph Gordon-Levitt"
+    );
+
+INSERT INTO actors ( 
+    id,
+    full_name)
+
+VALUES (
+    "11",
+    "Anne Hathaway"
+    );
+
+-- Relationship time using actor_id and movie_id from established tables for Characters 
+
+INSERT INTO characters ( 
+    id,
+    character_name, 
+    actor_id,
+    movie_id)
+
+VALUES (
+    "1",
+    "Bruce Wayne",
+    "1",
+    "1"
+    );
+
+INSERT INTO characters ( 
+    id,
+    character_name, 
+    actor_id,
+    movie_id)
+
+ VALUES (
+    "2",
+    "Alfred",
+    "2",
+    "1"
+    );
+
+INSERT INTO characters ( 
+    id,
+    character_name, 
+    actor_id,
+    movie_id)
+
+VALUES (
+    "3",
+    "Ra's Al Ghul",
+    "3",
+    "1"
+    );
+
+INSERT INTO characters ( 
+    id,
+    character_name, 
+    actor_id,
+    movie_id)
+
+VALUES (
+    "4",
+    "Rachel Dawes",
+    "4",
+    "1"
+    );
+
+INSERT INTO characters ( 
+    id,
+    character_name, 
+    actor_id,
+    movie_id)
+
+VALUES (
+    "5",
+    "Commissioner Gordon",
+    "5",
+    "1"
+    );
+
+INSERT INTO characters ( 
+    id,
+    character_name, 
+    actor_id,
+    movie_id)
+
+VALUES (
+    "6",
+    "Bruce Wayne",
+    "1",
+    "2"
+    );
+
+INSERT INTO characters ( 
+    id,
+    character_name, 
+    actor_id,
+    movie_id)
+
+VALUES (
+    "7",
+    "Joker",
+    "6",
+    "2"
+    );
+
+INSERT INTO characters ( 
+    id,
+    character_name, 
+    actor_id,
+    movie_id)
+
+VALUES (
+    "8",
+    "Harvey Dent",
+    "7",
+    "2"
+    );
+
+INSERT INTO characters ( 
+    id,
+    character_name, 
+    actor_id,
+    movie_id)
+
+VALUES (
+    "9",
+    "Alred",
+    "2",
+    "2"
+    );
+
+INSERT INTO characters ( 
+    id,
+    character_name, 
+    actor_id,
+    movie_id)
+
+VALUES (
+    "10",
+    "Rachel Dawes",
+    "8",
+    "2"
+    );
+
+INSERT INTO characters ( 
+    id,
+    character_name, 
+    actor_id,
+    movie_id)
+
+VALUES (
+    "11",
+    "Bruce Wayne",
+    "1",
+    "3"
+    );
+
+INSERT INTO characters ( 
+    id,
+    character_name, 
+    actor_id,
+    movie_id)
+
+VALUES (
+    "12",
+    "Commissioner Gordon",
+    "5",
+    "3"
+    );
+
+INSERT INTO characters ( 
+    id,
+    character_name, 
+    actor_id,
+    movie_id)
+
+VALUES (
+    "13",
+    "Bane",
+    "9",
+    "3"
+    );
+
+INSERT INTO characters ( 
+    id,
+    character_name, 
+    actor_id,
+    movie_id)
+
+VALUES (
+    "14",
+    "John Blake",
+    "10",
+    "3"
+    );
+
+INSERT INTO characters ( 
+    id,
+    character_name, 
+    actor_id,
+    movie_id)
+
+VALUES (
+    "15",
+    "Selina Kyle",
+    "11",
+    "3"
+    );
 
 -- Prints a header for the movies output
 .print "Movies"
