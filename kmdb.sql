@@ -108,12 +108,12 @@ DROP TABLE IF EXISTS actors;
 
 -- Create new tables, according to your domain model
 -- TODO!
-
+-- "Entities" are movies, studios, and actors 
 CREATE TABLE movies (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     movie_name TEXT,
     year_released INTEGER, 
-    MPAA_rating TEXT
+    mpaa_rating TEXT
 );
 
 CREATE TABLE studios (
@@ -121,21 +121,32 @@ CREATE TABLE studios (
     movie_id INTEGER
 );
 
+CREATE TABLE actors ( 
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    full_name TEXT
+);
+
+-- "Relationship" between these are the characters played in each movie by each actor 
 CREATE TABLE characters (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     character_name TEXT,
     actor_id INTEGER,
     movie_id INTEGER    
 );
-
-CREATE TAbLE actors ( 
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    full_name TEXT
-);
-
 -- Insert data into your database that reflects the sample data shown above
 -- Use hard-coded foreign key IDs when necessary
 -- TODO!
+
+INSERT INTO movies (
+    movie_name,
+    year_released,
+    mpaa_rating
+)
+VALUES (
+        "Batman Begins",                     
+        "2005",
+        "PG-13"
+);
 
 -- Prints a header for the movies output
 .print "Movies"
